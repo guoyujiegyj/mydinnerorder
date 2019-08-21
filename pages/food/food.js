@@ -34,7 +34,14 @@ Page({
       }
     })
   },
-
+  toDetail(e){
+    //通过事件对象获得传来的ID
+    let id=e.currentTarget.dataset.id
+    //进行页面跳转,传去id.
+    wx.navigateTo({
+      url:"/pages/foodDetail/foodDetail?id="+id
+    })
+  },
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */

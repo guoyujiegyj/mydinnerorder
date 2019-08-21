@@ -1,1 +1,13 @@
-/* pages/foodDetail/foodDetail.wxss */
+.container{
+    padding:0 20rpx;
+    display: flex;
+    flex-direction: column;
+}
+image{
+    width:100%;
+    background:red;
+}
+.container>text{
+    line-height: 58rpx;
+    height:58rpx;
+}

@@ -1,2 +1,5 @@
-<!--pages/foodDetail/foodDetail.wxml-->
-<text>pages/foodDetail/foodDetail.wxml</text>
+<view class="container">
+    <image src="{{foodList[0].img_url}}"></image>
+    <text>菜名：{{foodList[0].title}}</text>
+    <text>描述：{{foodList[0].content}}</text>
+</view>

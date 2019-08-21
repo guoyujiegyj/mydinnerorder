@@ -4,7 +4,7 @@
     {{item.title}}
   </view>
     <view class="imgContainer">
-    <view class="item" wx:for="{{item.list}}" wx:key="{{index}}">
+    <view class="item" catchtap="toDetail" data-id="{{item._id}}" wx:for="{{item.list}}" wx:key="{{index}}">
       <image src="{{item.img_url}}"></image>
       <text>{{item.title}}</text>
       <text>{{item.price}}</text>
