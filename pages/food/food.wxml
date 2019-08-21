@@ -1,0 +1,15 @@
+<view class="container">
+ <view wx:for="{{foodList}}" wx:key="{{index}}">
+   <view class="title">
+    {{item.title}}
+  </view>
+    <view class="imgContainer">
+    <view class="item" wx:for="{{item.list}}" wx:key="{{index}}">
+      <image src="{{item.img_url}}"></image>
+      <text>{{item.title}}</text>
+      <text>{{item.price}}</text>
+    </view>
+  </view>
+ </view>
+  
+</view>
