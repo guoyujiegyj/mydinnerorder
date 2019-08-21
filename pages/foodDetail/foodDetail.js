@@ -1,4 +1,5 @@
-// pages/foodDetail/foodDetail.js
+//引入全局配置的服务器路径页面
+let host=require("../utils/utils.js")
 Page({
 
   /**
@@ -16,7 +17,8 @@ Page({
   },
   getFoodDetail(id){
     wx.request({
-      url:'http://a.itying.com/api/productcontent?id='+id,
+      //地址用全局配置的地址进行拼接
+      url:host+'productcontent?id='+id,
       success:(res)=>{
         this.setData({
           foodList:res.data.result

@@ -3,6 +3,7 @@
     "pages/food/food",
     "pages/index/index",
     "pages/user/user",
+    "pages/utils/utils",
    
     "pages/foodDetail/foodDetail",
     "pages/shop/shop"

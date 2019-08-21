@@ -1,4 +1,4 @@
-// pages/food/food.js
+let  host=require("../utils/utils.js")
 Page({
 
   /**
@@ -13,11 +13,12 @@ Page({
    */
   onLoad: function (options) {
     this.foodList()
+
   },
   //菜单
   foodList(){
     wx.request({
-      url:"http://a.itying.com/api/productlist",
+      url:host.host+"productlist",
       success:(res)=>{
         var arr=res.data.result
         console.log(arr)
