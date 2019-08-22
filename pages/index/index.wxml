@@ -1,6 +1,6 @@
 
-<scroll-view scroll-y style="height: {{screenHeight}};" >
-<view bindtap="toDetail"  wx:for="{{list.result}}" wx:key="{{index}}" class="container"  data-aid="{{item.aid}}">
-  <view class="title">{{item.title}}</view>
-</view>
-  </scroll-view>
+<scroll-view scroll-y style="height: {{screenHeight}}px;" bindscrolltolower="loadMore" >
+  <view bindtap="toDetail"  wx:for="{{list}}" wx:key="{{index}}" class="container"  data-aid="{{item.aid}}">
+    <view class="title">{{item.title}}</view>
+  </view>
+</scroll-view>
