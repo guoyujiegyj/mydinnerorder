@@ -1,57 +1,35 @@
-
+// pages/indexDetail/indexDetail.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    list: [],
-    screenHeight:""
+    aid:"",
+    detail:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getList()
-    //获得屏幕高度
-    wx.getSystemInfo({
-      success: (res)=> {
-
-        this.setData({
-          screenHeight:res.windowHeight
-        })
-      },
+    let aid=options.aid
+    this.setData({
+      aid:aid
     })
+    this.detail()
   },
-  //加载数据列表
-  getList(){
-    var api = 'http://www.phonegap100.com/appapi.php'
-    wx.request({
-      url: api,
-      data:{
-        a: 'getPortalList',
-        catid:'20',
-        page:1
-      },
-      success:(res)=>{
-       this.setData({
-         list:res.data
-       })
-      }
-    })
-  },
-  //跳转到详情页
-  toDetail(e){
-    let aid=e.currentTarget.dataset.aid
-   wx.navigateTo({
-     url: "/pages/indexDetail/indexDetail?aid="+aid,
-   })
-  },
-  //加载更多
-  loadMore(){
-    console.log("more")
-  },
+//加载详情数据：
+detail(){
+  wx.request({
+    url: 'http://www.phonegap100.com/appapi.php?a=getPortalArticle&aid='+this.data.aid,
+    success:(res)=>{
+      this.setData({
+        detail:res.data.result
+      })
+    }
+  })
+},
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

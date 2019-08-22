@@ -1,0 +1,5 @@
+<!--父组件向子组件传值-->
+<header catchparent='fun' bindparen="run" id="header" title="{{title}}">
+  <button bindtap="handle">aaaaaaaaaaaaa</button>
+</header>
+<button bindtap="handle">clk</button>

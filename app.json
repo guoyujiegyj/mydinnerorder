@@ -1,39 +1,45 @@
 {
   "pages": [
-    "pages/food/food",
-    "pages/index/index",
+      "pages/index/index",
+"pages/food/food",
+    "pages/ter/ter",
+    
+ "pages/indexDetail/indexDetail",
     "pages/user/user",
     "pages/utils/utils",
-   
     "pages/foodDetail/foodDetail",
-    "pages/shop/shop"
+    "pages/shop/shop",
+    "component/header/header"
+  
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#000",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
-    "color":"#000",
-    "selectedColor":"#cbad30",
+    "color": "#000",
+    "selectedColor": "#cbad30",
     "list": [
       {
-      "pagePath": "pages/index/index",
-      "text": "首页",
-      "iconPath": "/images/home.png",
-      "selectedIconPath": "/images/home_active.png"
-    },{
-      "pagePath": "pages/food/food",
-      "text": "菜单",
-      "iconPath": "/images/list.png",
-      "selectedIconPath": "/images/list_active.png"
-    },{
-      "pagePath": "pages/user/user",
-      "text": "我的",
-      "iconPath": "/images/user.png",
-      "selectedIconPath": "/images/user_active.png"
-    }
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/home.png",
+        "selectedIconPath": "/images/home_active.png"
+      },
+      {
+        "pagePath": "pages/food/food",
+        "text": "菜单",
+        "iconPath": "/images/list.png",
+        "selectedIconPath": "/images/list_active.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "/images/user.png",
+        "selectedIconPath": "/images/user_active.png"
+      }
     ]
   },
   "sitemapLocation": "sitemap.json"

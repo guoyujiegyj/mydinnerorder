@@ -1,0 +1,15 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  padding:0 20rpx;
+
+}
+.container>view{
+  color:#666;
+  height:56rpx;
+  line-height: 56rpx;
+}
+.title{
+  font-size:38rpx;
+  color:#333;
+}

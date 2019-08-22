@@ -1,62 +1,36 @@
-
+// pages/ter/ter.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    list: [],
-    screenHeight:""
+      //向子组件传的值。
+      title:"父组件向子组件传递的值"
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getList()
-    //获得屏幕高度
-    wx.getSystemInfo({
-      success: (res)=> {
 
-        this.setData({
-          screenHeight:res.windowHeight
-        })
-      },
-    })
   },
-  //加载数据列表
-  getList(){
-    var api = 'http://www.phonegap100.com/appapi.php'
-    wx.request({
-      url: api,
-      data:{
-        a: 'getPortalList',
-        catid:'20',
-        page:1
-      },
-      success:(res)=>{
-       this.setData({
-         list:res.data
-       })
-      }
-    })
-  },
-  //跳转到详情页
-  toDetail(e){
-    let aid=e.currentTarget.dataset.aid
-   wx.navigateTo({
-     url: "/pages/indexDetail/indexDetail?aid="+aid,
-   })
-  },
-  //加载更多
-  loadMore(){
-    console.log("more")
+  handle(){
+    console.log("父组件的方法")
+    var header=this.selectComponent("#header")
+    header.say()
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
 
+  },
+  run(){
+   console.log("fuzujian")
+  },
+  fun(){
+    console.log("父组件的fun方法")
   },
 
   /**

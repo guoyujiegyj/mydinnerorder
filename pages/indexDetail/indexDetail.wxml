@@ -1,0 +1,7 @@
+<view class="container">
+<image src="detail[0].pic"></image>
+  <view class="title">标题：{{detail[0].title}}</view>
+  <view class="aursor">用户名：{{detail[0].username}}</view>
+  <view class="summary">描述：{{detail[0].summary}}</view>
+  <view class="content">详情：{{detail[0].content}}</view>
+</view>
